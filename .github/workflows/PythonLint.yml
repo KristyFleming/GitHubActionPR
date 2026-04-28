@@ -4,8 +4,8 @@ on:
   - workflow_dispatch
 
 Jobs:
-runs-on: ubuntu-latest
-LintingOperation:
+LintingOperation:   # this is the name of a jobs:
+  runs-on: ubuntu-latest  # this is the snowglobe for the work
   steps:
     - uses: actions/checkout@v6
     - uses: actions/setup-python@v6
