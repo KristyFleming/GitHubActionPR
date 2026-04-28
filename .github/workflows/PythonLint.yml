@@ -3,14 +3,14 @@ name: Python linting
 on: 
   - workflow_dispatch
 
-Jobs:
-LintingOperation:   # this is the name of a jobs:
-  runs-on: ubuntu-latest  # this is the snowglobe for the work
-  steps:
-    - uses: actions/checkout@v6
-    - uses: actions/setup-python@v6
-      with:
-        python-version: '3.13'
-    - uses: advanced-security/python-lint-code-scanning-action@v1
-      with:
-        linter: flake8
+jobs:
+  LintingOperation:       # this is the name of a job
+    runs-on: ubuntu-latest    # this is the snowglobe for the work
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: flake8
